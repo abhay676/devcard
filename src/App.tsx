@@ -16,13 +16,11 @@ function App() {
                   <u>INDIA</u>
               </strong>.</p>
           <p>
-              <br>
           </p>
           <p>
               <strong>Senior Software Developer @Justdial</strong>
           </p>
           <p>
-              <br>
           </p>
           <p>Passionate about startups and stocks</p>"
           imageURL="https://i.ibb.co/PNDpsB3/pf-n-3.png"
