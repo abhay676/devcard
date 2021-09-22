@@ -6,6 +6,7 @@ type Link = {
   name: string;
   icon?: React.ReactNode;
   isNested: boolean;
+  isConnect?: boolean;
 };
 
 type LinkType = {
@@ -20,23 +21,20 @@ const LinkComponent: React.FunctionComponent<LinkType> = ({ links }) => {
       // open modal and fetch 5 github repo as per user
       setModalOpen(true);
     } else {
-      return window.open(
-        `${url}?utm_source=techeclub&utm_medium=click`,
-        '__blank'
-      );
+      return window.open(`${url}`, '__blank');
     }
   };
 
   return (
     <React.Fragment>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-4 text-center ml-4 mr-4 justify-center items-center ">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-5 text-center ml-4 mr-4 justify-center items-center ">
         {links.map((link) => (
           <div
             className="flex items-center justify-self-auto border-black bg-white cursor-pointer  border-2 transition duration-500"
             key={link.index}
             onClick={() => handleRedirect(link.isNested, link.url)}
           >
-            <picture className="p-2 md:p-4 text-lg">{link.icon}</picture>
+            <picture className="p-1 md:p-4 text-lg">{link.icon}</picture>
             <p className="font-semibold text-lg">{link.name}</p>
           </div>
         ))}

@@ -1,9 +1,8 @@
 import React from 'react';
-import { VscTwitter, VscOctoface } from 'react-icons/vsc';
-import { FaLinkedinIn, FaLink } from 'react-icons/fa';
+import { VscTwitter } from 'react-icons/vsc';
+import { FaLinkedinIn, FaLink, FaGithub, FaUserCircle } from 'react-icons/fa';
 import Link from './components/Link/Link';
 import User from './components/User/User';
-import Promotion from './components/Promotion/Promotion';
 
 function App() {
   React.useEffect(() => {
@@ -18,8 +17,7 @@ function App() {
           <User
             name="Abhay Goswami"
             intro="
-          <p>Hi, I am from 🇮🇳
-          <p>"
+          <p>Hi, I am from 🇮🇳, Senior Software Developer <a href='https://justdial.com' target='__blank__' style='color: white; font-weight: bold'>@Justdial</a><p>"
             imageURL="https://i.ibb.co/PNDpsB3/pf-n-3.png"
           />
           <Link
@@ -27,36 +25,43 @@ function App() {
               {
                 index: 1,
                 name: 'Twitter',
-                url: 'https://twitter.com/nikk_xyz',
+                url: 'https://bit.ly/nikk_twitter',
                 icon: <VscTwitter />,
                 isNested: false,
               },
               {
                 index: 2,
                 name: 'Github',
-                url: 'https://github.com',
-                icon: <VscOctoface />,
+                url: 'https://bit.ly/nikk_dev',
+                icon: <FaGithub />,
                 isNested: true,
               },
               {
                 index: 3,
                 name: 'LinkedIn',
-                url: 'https://linkedin.com/in/abhay676',
+                url: 'https://bit.ly/nikk_linkedin',
                 icon: <FaLinkedinIn />,
                 isNested: false,
               },
               {
                 index: 4,
-                name: 'Blog',
-                url: 'https://example.com',
+                name: 'Resume',
+                url: 'https://bit.ly/nikk_resume',
                 icon: <FaLink />,
+                isNested: false,
+              },
+              {
+                index: 5,
+                name: 'Connect',
+                url: "mailto:abhaygoswami676@gmail.com?subject=Hey, Abhay let's connect for a quick call",
+                icon: <FaUserCircle />,
                 isNested: false,
               },
             ]}
           />
         </div>
       </div>
-      <Promotion />
+      {/* <Promotion /> */}
     </div>
   );
 }

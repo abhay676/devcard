@@ -40,7 +40,6 @@ const Repo: React.FunctionComponent<GithubRepo> = ({
   language,
   updated_at,
 }) => {
-
   return (
     <div
       className="bg-gray-100 rounded-xl p-2 mb-4 cursor-pointer"
@@ -125,7 +124,6 @@ const Repos: React.FunctionComponent<ReposType> = ({
           <Tag
             size="lg"
             variant="solid"
-            colorScheme="teal"
             onClick={() => window.open(githubURL, '__blank')}
           >
             <p className="m-2">Github Account</p> <VscLinkExternal />
