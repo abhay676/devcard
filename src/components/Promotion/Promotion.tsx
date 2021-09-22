@@ -1,6 +1,6 @@
 const Promotion = () => {
   return (
-    <footer className="flex justify-center items-center bg-red-300 p-2 rounded-lg m-4 fixed bottom-0 transform">
+    <footer className="md:flex md:justify-center md:items-center md:bg-red-300 md:p-2 md:rounded-lg md:m-4 fixed bottom-0 transform hidden">
       Create your free developer card
       <a
         href="https://techeclub.co.in"

@@ -90,6 +90,10 @@ const Repos: React.FunctionComponent<ReposType> = ({
       onClose={onClose}
       isOpen={isOpen}
       motionPreset="slideInBottom"
+      autoFocus
+      scrollBehavior="inside"
+      closeOnEsc={false}
+      blockScrollOnMount
     >
       <ModalOverlay />
       <ModalContent>
