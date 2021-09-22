@@ -11,6 +11,7 @@ import {
   Spinner,
 } from '@chakra-ui/react';
 import { VscLinkExternal } from 'react-icons/vsc';
+// import { formatDistance, formatRFC3339 } from 'date-fns';
 
 interface ReposType {
   isOpen: boolean;
@@ -37,7 +38,9 @@ const Repo: React.FunctionComponent<GithubRepo> = ({
   description,
   created_at,
   language,
+  updated_at,
 }) => {
+
   return (
     <div
       className="bg-gray-100 rounded-xl p-2 mb-4 cursor-pointer"
@@ -55,8 +58,8 @@ const Repo: React.FunctionComponent<GithubRepo> = ({
       )}
 
       <div className="flex justify-items-start mb-2">
-        <p className="font-semibold text-center pr-2">Created AT:</p>
-        <p className="text-gray-700">{created_at}</p>
+        <p className="font-semibold text-center pr-2">updated:</p>
+        <p className="text-gray-700">{updated_at}</p>
       </div>
     </div>
   );

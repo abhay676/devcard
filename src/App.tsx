@@ -6,6 +6,11 @@ import User from './components/User/User';
 import Promotion from './components/Promotion/Promotion';
 
 function App() {
+  React.useEffect(() => {
+    // setting up the background color
+    document.body.style.backgroundColor = '#FAA4A5';
+  }, []);
+
   return (
     <div className="h-full md:h-full md:mt-20 mt-20">
       <div className="flex h-full md:h-full md:mt-20 justify-center items-center">
@@ -13,18 +18,8 @@ function App() {
           <User
             name="Abhay Goswami"
             intro="
-          <p>Hi, I am from
-              <strong>
-                  <u>INDIA</u>
-              </strong>.</p>
-          <p>
-          </p>
-          <p>
-              <strong>Senior Software Developer @Justdial</strong>
-          </p>
-          <p>
-          </p>
-          <p>Passionate about startups and stocks</p>"
+          <p>Hi, I am from 🇮🇳
+          <p>"
             imageURL="https://i.ibb.co/PNDpsB3/pf-n-3.png"
           />
           <Link

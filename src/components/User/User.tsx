@@ -20,7 +20,7 @@ const User: React.FunctionComponent<UserType> = ({ imageURL, name, intro }) => {
         {name}
       </Heading>
       <div
-        className="mt-4 p-2 text-lg border-4 mr-2 ml-2 justify-center items-center"
+        className="mt-4 p-2 text-lg text-black mr-2 ml-2 justify-center items-center"
         dangerouslySetInnerHTML={{ __html: intro }}
       ></div>
     </div>

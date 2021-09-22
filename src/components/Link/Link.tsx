@@ -32,12 +32,12 @@ const LinkComponent: React.FunctionComponent<LinkType> = ({ links }) => {
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4 text-center ml-4 mr-4 justify-center items-center ">
         {links.map((link) => (
           <div
-            className="flex items-center justify-center  bg-red-300 cursor-pointer"
+            className="flex items-center justify-self-auto border-black bg-white cursor-pointer  border-2 transition duration-500"
             key={link.index}
             onClick={() => handleRedirect(link.isNested, link.url)}
           >
-            <picture className="p-2 md:p-4 text-2xl">{link.icon}</picture>
-            <p className="font-semibold text-2xl">{link.name}</p>
+            <picture className="p-2 md:p-4 text-lg">{link.icon}</picture>
+            <p className="font-semibold text-lg">{link.name}</p>
           </div>
         ))}
       </div>
