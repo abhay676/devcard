@@ -46,7 +46,7 @@ function App() {
               {
                 index: 4,
                 name: 'Resume',
-                url: 'https://bit.ly/nikk_resume',
+                url: 'https://bit.ly/nikk_latest_resume',
                 icon: <FaLink />,
                 isNested: false,
               },
