@@ -32,7 +32,7 @@ const LinkComponent: React.FunctionComponent<LinkType> = ({ links }) => {
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4 text-center ml-4 mr-4 justify-center items-center ">
         {links.map((link) => (
           <div
-            className="flex items-center justify-center  bg-red-300 hover:cursor-pointer"
+            className="flex items-center justify-center  bg-red-300 cursor-pointer"
             key={link.index}
             onClick={() => handleRedirect(link.isNested, link.url)}
           >
@@ -43,10 +43,11 @@ const LinkComponent: React.FunctionComponent<LinkType> = ({ links }) => {
       </div>
       {isModalOpen && (
         <Repos
-          title="Top Github Repositories"
+          title="Latest Github Repositories"
           isOpen={isModalOpen}
           onClose={() => setModalOpen(false)}
           githubURL="https://github.com/abhay676"
+          userName="abhay676"
         />
       )}
     </React.Fragment>

@@ -10,8 +10,13 @@ type UserType = {
 const User: React.FunctionComponent<UserType> = ({ imageURL, name, intro }) => {
   return (
     <div className="text-center mb-4">
-      <Avatar size="2xl" name={name} src={imageURL} />
-      <Heading as="h2" size="2xl" className="mt-2 mb-2">
+      <Avatar
+        size="2xl"
+        name={name}
+        src={imageURL}
+        className="transform transition duration-500 hover:scale-125"
+      />
+      <Heading as="h2" size="2xl" className="mt-4 mb-2 ">
         {name}
       </Heading>
       <div
