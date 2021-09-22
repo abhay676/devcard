@@ -7,8 +7,8 @@ import Promotion from './components/Promotion/Promotion';
 
 function App() {
   return (
-    <div className="h-full md:h-screen">
-      <div className="flex h-full md:h-screen justify-center items-center">
+    <div className="h-full md:h-full md:mt-20 mt-20">
+      <div className="flex h-full md:h-full md:mt-20 justify-center items-center">
         <div>
           <User
             name="Abhay Goswami"
