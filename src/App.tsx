@@ -18,7 +18,7 @@ function App() {
             name="Abhay Goswami"
             intro="
           <p>Hi, I am from 🇮🇳, Senior Software Developer <a href='https://justdial.com' target='__blank__' style='color: white; font-weight: bold'>@Justdial</a><p>"
-            imageURL="https://i.ibb.co/PNDpsB3/pf-n-3.png"
+            imageURL="https://i.ibb.co/tCj3n7X/pf-n-3.png"
           />
           <Link
             links={[
@@ -46,7 +46,7 @@ function App() {
               {
                 index: 4,
                 name: 'Resume',
-                url: 'https://bit.ly/nikk_resume',
+                url: 'https://bit.ly/nikk_latest_resume',
                 icon: <FaLink />,
                 isNested: false,
               },
