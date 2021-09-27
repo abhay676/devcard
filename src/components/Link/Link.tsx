@@ -1,5 +1,4 @@
-import React from 'react';
-import Repos from '../Repos/Repos';
+import React, { Suspense, lazy } from 'react';
 type Link = {
   index: string | number;
   url: string;
@@ -12,6 +11,8 @@ type Link = {
 type LinkType = {
   links: Array<Link>;
 };
+
+const Repos = lazy(() => import('../Repos/Repos'));
 
 const LinkComponent: React.FunctionComponent<LinkType> = ({ links }) => {
   const [isModalOpen, setModalOpen] = React.useState(false);
@@ -40,13 +41,15 @@ const LinkComponent: React.FunctionComponent<LinkType> = ({ links }) => {
         ))}
       </div>
       {isModalOpen && (
-        <Repos
-          title="Latest Github Repositories"
-          isOpen={isModalOpen}
-          onClose={() => setModalOpen(false)}
-          githubURL="https://github.com/abhay676"
-          userName="abhay676"
-        />
+        <Suspense fallback={<div>loading...</div>}>
+          <Repos
+            title="Latest Github Repositories"
+            isOpen={isModalOpen}
+            onClose={() => setModalOpen(false)}
+            githubURL="https://github.com/abhay676"
+            userName="abhay676"
+          />
+        </Suspense>
       )}
     </React.Fragment>
   );
