@@ -28,15 +28,15 @@ const LinkComponent: React.FunctionComponent<LinkType> = ({ links }) => {
 
   return (
     <React.Fragment>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-5 text-center ml-4 mr-4 justify-center items-center ">
+      <div>
         {links.map((link) => (
           <div
-            className="flex items-center justify-self-auto border-black bg-white cursor-pointer  border-2 transition duration-500"
+            className="flex items-center justify-self-auto border-black bg-white cursor-pointer  border-2 mx-4 my-4 p-2"
             key={link.index}
             onClick={() => handleRedirect(link.isNested, link.url)}
           >
-            <picture className="p-1 md:p-4 text-lg">{link.icon}</picture>
-            <p className="font-semibold text-lg">{link.name}</p>
+            <picture className="p-1 md:p-4 md:text-2xl">{link.icon}</picture>
+            <p className="font-semibold md:text-2xl">{link.name}</p>
           </div>
         ))}
       </div>
